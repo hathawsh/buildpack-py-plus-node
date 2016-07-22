@@ -9,5 +9,9 @@ export PATH="$BUILD_DIR/frontend/.heroku/node/bin:$PATH:$BUILD_DIR/frontend/bin:
 cd $BUILD_DIR/frontend
 echo "Running npm run deploy"
 npm run deploy || exit 1
+cd $BUILD_DIR
+
+echo "Symlinking backend/.heroku to .heroku"
+ln -sfn backend/.heroku .heroku
 
 exit 0
