@@ -13,4 +13,5 @@ if [ ! -d $BUILD_DIR/frontend/package.json ]; then
     exit 1
 fi
 
-echo py-plus-node
+echo "buildpack-py-plus-node is active"
+exit 0

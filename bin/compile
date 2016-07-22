@@ -7,6 +7,7 @@ ENV_DIR=$3
 export PATH="$BUILD_DIR/frontend/.heroku/node/bin:$PATH:$BUILD_DIR/frontend/bin:$BUILD_DIR/frontend/node_modules/.bin"
 
 cd $BUILD_DIR/frontend
+echo "Running npm run deploy"
 npm run deploy
 
 exit 0
