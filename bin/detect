@@ -3,14 +3,12 @@
 BUILD_DIR=$1
 
 # Exit early if app is not compatible
-if [ ! -d $BUILD_DIR/backend/requirements.txt ]; then
-  echo "Could not find requirements.txt"
+if [ ! -f $BUILD_DIR/backend/requirements.txt ]; then
   exit 1
 fi
 
-if [ ! -d $BUILD_DIR/frontend/package.json ]; then
-  echo "Could not find package.json"
-    exit 1
+if [ ! -f $BUILD_DIR/frontend/package.json ]; then
+  exit 1
 fi
 
 echo "buildpack-py-plus-node is active"
