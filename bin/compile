@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+BUILD_DIR=$1
+CACHE_DIR=$2
+ENV_DIR=$3
+
+export PATH="$BUILD_DIR/frontend/.heroku/node/bin:$PATH:$BUILD_DIR/frontend/bin:$BUILD_DIR/frontend/node_modules/.bin"
+
+cd $BUILD_DIR/frontend
+npm run deploy
+
+exit 0
